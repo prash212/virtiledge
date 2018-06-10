@@ -1,0 +1,120 @@
+<app-header></app-header>
+
+
+
+<div class="modal fade fill-in custom-show" id="modalFillIn" tabindex="-1" role="dialog" aria-hidden="true">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+    <i class="pg-close"></i>
+  </button>
+  <div class="modal-dialog ">
+    <div class="modal-content modal-content-custom">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12 m-t-40">
+            <ul class="nav nav-tabs nav-tabs-simple custom-nav-tabs" role="tablist" data-init-reponsive-tabs="dropdownfx">
+              <li class="nav-item" *ngFor="let course of courseCategory; let i = index">
+                <a href="javascript:;" class="{{i==0?'active':''}}" data-toggle="tab" role="tab" data-target="#course_menu_{{i}}" (click)="course_list(course.cc_id_pk);">{{course?.cc_name}}</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="course_menu_1">
+                <div class="row column-seperation">
+                  <div class="col-lg-8">
+
+                    <ul class="list-group custom-course-menu-list m-t-20">
+                      <li *ngFor="let course of coursesMenu">
+                        <a routerLink="/course-details/{{course.course_id_pk}}" data-dismiss="modal">
+                          {{course.course_title}} {{course.course_cc_id_fk}}
+                          <small>&reg;</small>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane " id="course_menu_2">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <ul class="list-group custom-course-menu-list m-t-20">
+                      <li *ngFor="let course of coursesMenu">
+                        <a routerLink="/course-details/{{course.course_id_pk}}" data-dismiss="modal">
+                          {{course.course_title}} {{course.course_cc_id_fk}}
+                          <small>&reg;</small>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="course_menu_3">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <ul class="list-group custom-course-menu-list m-t-20">
+                      <li *ngFor="let course of coursesMenu">
+                        <a routerLink="/course-details/{{course.course_id_pk}}" data-dismiss="modal">
+                          {{course.course_title}} {{course.course_cc_id_fk}}
+                          <small>&reg;</small>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="course_menu_4">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <ul class="list-group custom-course-menu-list m-t-20">
+                      <li *ngFor="let course of coursesMenu">
+                        <a routerLink="/course-details/{{course.course_id_pk}}" data-dismiss="modal">
+                          {{course.course_title}} {{course.course_cc_id_fk}}
+                          <small>&reg;</small>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="course_menu_5">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <ul class="list-group custom-course-menu-list m-t-20">
+                      <li *ngFor="let course of coursesMenu">
+                        <a routerLink="/course-details/{{course.course_id_pk}}" data-dismiss="modal">
+                          {{course.course_title}} {{course.course_cc_id_fk}}
+                          <small>&reg;</small>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="course_menu_6">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <ul class="list-group custom-course-menu-list m-t-20">
+                      <li *ngFor="let course of coursesMenu">
+                        <a routerLink="/course-details/{{course.course_id_pk}}" data-dismiss="modal">
+                          {{course.course_title}} {{course.course_cc_id_fk}}
+                          <small>&reg;</small>
+                        </a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

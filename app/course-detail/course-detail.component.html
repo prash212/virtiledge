@@ -1,0 +1,410 @@
+<br>
+<br>
+<br>
+<br>
+<div class="page-content-wrapper">
+  <div class="content sm-gutter">
+    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+      <div class="inner">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Course Detail</li>
+        </ol>
+      </div>
+    </div>
+    <div class="container-fluid p-l-5 p-r-5 p-t-0 p-b-25 sm-padding-10">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card card-transparent">
+            <div class="card-block">
+              <div class="row">
+                <div class="col-lg-9">
+                  <div class="card card-default">
+                    <div class="card-block course-detail-banner bg-img-1">
+                      <div class="banner-overlay"></div>
+                      <h2>{{courseDetails['course_title']}}</h2>
+                      <!-- <p>The PMP certification is the global standard for project management</p> -->
+                    </div>
+                  </div>
+                  <div class="card card-default">
+                    <div class="row">
+                      <div class="col-12">
+                        <ul class="nav nav-tabs nav-tabs-simple" role="tablist" data-init-reponsive-tabs="dropdownfx">
+                          <li class="nav-item">
+                            <a data-href="#youGet" class="active bold js-scroll-trigger">You Get</a>
+                          </li>
+                          <li class="nav-item">
+                            <a data-href="#schedules" class="bold js-scroll-trigger">Schedules</a>
+                          </li>
+                          <li class="nav-item">
+                            <a data-href="#description" class="bold js-scroll-trigger">Course Description</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card card-default">
+                    <div class="card-header separator">
+                      <div class="card-title">
+                        <h5 class="m-b-0 m-t-0">
+                          <span class="bold">Mode of Learning</span>
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <div class="row">
+                        <div class="col-4 col-lg-4">
+                          <div class="card card-default">
+                            <div class="card-block text-center">
+                              <h6>
+                                <span class="semi-bold">Classroom Training</span>
+                              </h6>
+                              <img src="../assets/main/img/icons/virtiledge-icon-60x60-1.png" class="figure-img img-fluid rounded p-t-10" alt="">
+                              <a href="javascript:;" class="btn btn-default btn-block m-t-20" routerLink="/events">View Schedules/Price
+                                <i class="fa fa-angle-double-right m-l-5"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 col-lg-4">
+                          <div class="card card-default">
+                            <div class="card-block text-center">
+                              <h6>
+                                <span class="semi-bold">Instructor Lead Live Training</span>
+                              </h6>
+                              <img src="../assets/main/img/icons/virtiledge-icon-60x60-3.png" class="figure-img img-fluid rounded p-t-10" alt="">
+                              <a href="javascript:;" class="btn btn-default btn-block m-t-20" routerLink="/events">View Schedules/Price
+                                <i class="fa fa-angle-double-right m-l-5"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 col-lg-4">
+                          <div class="card card-default">
+                            <div class="card-block text-center">
+                              <h6>
+                                <span class="semi-bold">E-Learning</span>
+                              </h6>
+                              <img src="../assets/main/img/icons/virtiledge-icon-60x60-2.png" class="figure-img img-fluid rounded p-t-10" alt="">
+                              <a href="javascript:;" class="btn btn-default btn-block m-t-20" routerLink="/events">Enroll Now
+                                <i class="fa fa-angle-double-right m-l-5"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="card card-default">
+                            <div class="card-block text-center">
+                              <h5>
+                                <span class="semi-bold">Corporate Training Solutions</span>
+                              </h5>
+                              <p>Virtiledge’s corporate training solutions is custom designed to help professionals keep ahead
+                                in fast growing business atmospheres.
+                              </p>
+                              <a href="javascript:;" class="btn btn-primary m-t-20">Contact Us</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card card-default" id="schedules">
+                    <div class="card-header separator">
+                      <div class="card-title">
+                        <h5 class="m-b-0 m-t-0">
+                          <span class="bold">Upcoming Training Schedule</span>
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                     
+                      <div class="table-responsive">
+                        <table class="table" id="tableWithSearch">
+                          <thead>
+                            <tr>
+                              <th>Course Category</th>
+                              <th>Course</th>
+                              <th>Course Type</th>
+                              <th>Workshop Date</th>
+                              <th>Price</th>
+                              <th>Register</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let event of eventDetails">
+                              <td class="v-align-middle ">
+                                <p>{{event.cc_name}}</p>
+                              </td>
+                              <td class="v-align-middle">
+                                <p>{{event.course_title}}</p>
+                              </td>
+                              <td class="v-align-middle">
+                                <p>{{event.event_type}}</p>
+                              </td>
+                              <td class="v-align-middle">
+                                <p style="color: green">{{event.event_from_date}} <br> -  {{event.event_to_date}}</p>
+                              </td>
+                              <td class="v-align-middle">
+                                
+                                <p class="bold">{{event.event_price_type}} {{event.event_price}}</p>
+                              </td>
+                              <td class="v-align-middle">
+                                <a href="javascript:;" class="btn btn-primary btn-sm">Enroll Now</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card card-default" id="youGet">
+                    <div class="card-header separator">
+                      <div class="card-title">
+                        <h5 class="m-b-0 m-t-0">
+                          <span class="bold">You Get</span>
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <div [innerHTML]="courseDetails.course_key_features"></div>
+                    </div>
+                  </div>
+                  <div class="card card-default" id="description">
+                    <div class="card-header separator">
+                      <div class="card-title">
+                        <h5 class="m-b-0 m-t-0">
+                          <span class="bold">Description</span>
+
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <ul class="nav nav-tabs nav-tabs-simple" role="tablist" data-init-reponsive-tabs="dropdownfx">
+                        <li class="nav-item">
+                          <a class="active" data-toggle="tab" role="tab" data-target="#desc" href="#">Description</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="" data-toggle="tab" role="tab" data-target="#curriculam" href="#">Curriculam</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" data-toggle="tab" role="tab" data-target="#examCertification">Exam & Certification</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" data-toggle="tab" role="tab" data-target="#eligibility">Eligibility</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" data-toggle="tab" role="tab" data-target="#faqs">FAQs</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content">
+                          <div class="tab-pane active" id="desc">
+                              <div [innerHTML]="courseDetails.course_description"></div>
+                            </div>
+                        <div class="tab-pane" id="curriculam">
+                          <div [innerHTML]="courseDetails.course_curriculum"></div>
+                        </div>
+                        <div class="tab-pane " id="examCertification">
+                          <div [innerHTML]="courseDetails.course_certification"></div>
+                        </div>
+                        <div class="tab-pane " id="eligibility">
+                          <div [innerHTML]="courseDetails.course_eligibilitycreteria"></div>
+                        </div>
+                        <div class="tab-pane" id="faqs">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="card-group horizontal m-t-30" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card card-default m-b-0" *ngFor="let faq of faqDetails; let i= index">
+                                  <div class="card-header " role="tab" id="headingOne">
+                                    
+                                      <a class="bold color-blue">
+                                        {{faq.faq_question}}
+                                      </a>
+                                      <br>
+                                      {{faq.faq_answer}}
+                                    
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 col-lg-3">
+                  <div class="card card-default">
+                    <div class="card-block">
+                      <h3>
+                        <span class="semi-bold">Course</span> Brochure</h3>
+                      <a href="javascript:;" class="btn btn-primary btn-lg m-t-20">
+                        <i class="fa fa-cloud-download m-r-5"></i>Download</a>
+                    </div>
+                  </div>
+                  <div class="card card-default">
+                    <div class="card-block">
+                      <h5>
+                        <span class="semi-bold">Request</span> more information</h5>
+                      <form id="form-register" class="p-t-15" role="form" action="#">
+                        <div class="form-group form-group-default required">
+                          <label>Full Name</label>
+                          <div class="controls">
+                            <input type="text" name="username" placeholder="Name" class="form-control" required>
+                          </div>
+                        </div>
+                        <div class="form-group form-group-default required">
+                          <label>Email</label>
+                          <div class="controls">
+                            <input type="text" name="email" placeholder="Email" class="form-control" required>
+                          </div>
+                        </div>
+                        <div class="form-group form-group-default required">
+                          <label>Course</label>
+                          <div class="controls">
+                            <input type="password" class="form-control required" name="password" placeholder="Select course" required>
+                          </div>
+                        </div>
+                        <div class="form-group form-group-default required typehead" id="sample-three">
+                          <label>Message</label>
+                          <textarea class="form-control" cols="12" rows="4"></textarea>
+                          <input class="typeahead form-control sample-typehead" name="country" type="text" placeholder="your message" required>
+                        </div>
+                        <div class="form-group m-t-20 m-b-20 required">
+                          <div class="checkbox check-success">
+                            <input type="checkbox" value="1" id="checkbox1">
+                            <label for="checkbox1">I agree to be contacted over email and phone</label>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary btn-cons btn-block btn-lg m-t-10" type="submit">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card-block">
+            <h4 class="bold p-b-10">Popular Courses</h4>
+            <div class="row">
+              <div class="col-lg-3">
+                <a href="javascript:;">
+                  <div data-pages="card" class="card card-default" id="card-basic">
+                    <div class="card-header  separator">
+                      <div class="card-title">
+                        <span>
+                          <i class="fa fa-star m-r-5"></i>3.5/5, 167 Reveiws
+                        </span>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <h5>
+                        <span class="semi-bold">Web Designing</span>
+                      </h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+
+                      </p>
+                    </div>
+                    <div class="card-footer  ">
+                      <a href="#">Know more
+                        <i class="fa fa-angle-double-right m-l-5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3">
+                <a href="javascript:;">
+                  <div data-pages="card" class="card card-default" id="card-basic">
+                    <div class="card-header  separator">
+                      <div class="card-title">
+                        <span>
+                          <i class="fa fa-star m-r-5"></i>2.5/5, 210 Reveiws</span>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <h5>
+                        <span class="semi-bold">System Engineering</span>
+                      </h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+
+                      </p>
+                    </div>
+                    <div class="card-footer  ">
+                      <a href="#">Know more
+                        <i class="fa fa-angle-double-right m-l-5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3">
+                <a href="javascript:;">
+                  <div data-pages="card" class="card card-default" id="card-basic">
+                    <div class="card-header  separator">
+                      <div class="card-title">
+                        <span>
+                          <i class="fa fa-star m-r-5"></i>4.0/5, 117 Reveiws</span>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <h5>
+                        <span class="semi-bold">Interior Architecture</span>
+                      </h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+
+                      </p>
+                    </div>
+                    <div class="card-footer  ">
+                      <a href="#">Know more
+                        <i class="fa fa-angle-double-right m-l-5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3">
+                <a href="javascript:;">
+                  <div data-pages="card" class="card card-default" id="card-basic">
+                    <div class="card-header  separator">
+                      <div class="card-title">
+                        <span>
+                          <i class="fa fa-star m-r-5"></i>3.5/5, 76 Reveiws</span>
+                      </div>
+                    </div>
+                    <div class="card-block">
+                      <h5>
+                        <span class="semi-bold">Engineering Design</span>
+                      </h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+
+                      </p>
+                    </div>
+                    <div class="card-footer  ">
+                      <a href="#">Know more
+                        <i class="fa fa-angle-double-right m-l-5"></i>
+                      </a>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

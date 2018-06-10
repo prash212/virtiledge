@@ -1,0 +1,304 @@
+<!-- Footer Section Starts Here -->
+<footer>
+  <div class="footer">
+    <div class="container container-fixed-lg">
+      <div class="row">
+        <div class="col-md-3">
+          <ul class="list-group custom-footer-list">
+            <li>
+              <h6>Company</h6>
+            </li>
+            <li>
+              <a href="javascript:;">About Us</a>
+            </li>
+            <li>
+              <a href="javascript:;">Our Team</a>
+            </li>
+            <li>
+              <a href="javascript:;">Help and Support</a>
+            </li>
+            <li>
+              <a href="javascript:;">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-group custom-footer-list">
+            <li>
+              <h6>For Business</h6>
+            </li>
+            <li>
+              <a href="javascript:;" data-toggle="modal" data-target="#inquiry_modal">Corporate Training</a>
+            </li>
+            <li>
+              <a href="javascript:;">Request a Quote</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-group custom-footer-list">
+            <li>
+              <h6>Legal</h6>
+            </li>
+            <li>
+              <a href="javascript:;">Terms Of Use</a>
+            </li>
+            <li>
+              <a href="javascript:;">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="reschedule-policy.php">Reschedule Policy</a>
+            </li>
+            <li>
+              <a href="refund-policy.php">Refund Policy</a>
+            </li>
+            <li>
+              <a href="javascript:;">Disclaimer</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-group custom-footer-list">
+            <li>
+              <h6>Call Us</h6>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="bold">
+                  <i class="fa fa-phone"></i> +121 4444 555566
+                </span>
+              </a>
+            </li>
+          </ul>
+          <ul class="list-group custom-footer-list">
+            <li>
+              <h6>Support</h6>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <span class="bold">
+                  <i class="fa fa-envelope"></i> support@coursepro.com
+                </span>
+              </a>
+            </li>
+          </ul>
+          <ul class="list-group custom-footer-list">
+            <li>
+              <h6>Connect With Us</h6>
+            </li>
+            <li>
+              <div class="btn-group sm-m-t-30">
+                <a class="btn btn-default">
+                  <i class="fa fa-facebook color-facebook"></i>
+                </a>
+                <a class="btn btn-default">
+                  <i class="fa fa-google-plus color-google-plus"></i>
+                </a>
+                <a class="btn btn-default">
+                  <i class="fa fa-twitter color-twitter"></i>
+                </a>
+                <a class="btn btn-default">
+                  <i class="fa fa-linkedin color-linkedin"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright sm-text-center">
+        <p class="small no-margin pull-left sm-pull-reset">
+          <span>Copyright &copy; 2017 </span>
+          <span class="font-montserrat bold">Virtiledge</span>.
+          <span>All rights reserved. </span>
+        </p>
+        <!-- <p class="small no-margin pull-right sm-pull-reset"> -->
+        <!-- Hand-crafted <span class="hint-text">&amp; made with Love</span> -->
+        <!-- </p> -->
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer Section Ends Here -->
+
+
+
+
+<!-- Inquiry Modal Starts Here -->
+<div class="modal fade disable-scroll" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header clearfix text-left">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <i class="pg-close fs-14"></i>
+        </button>
+        <h5>Request
+          <span class="semi-bold">Callback</span>
+        </h5>
+      </div>
+      <div class="modal-body">
+        <form id="form-register" class="p-t-15" action="#">
+          <div class="form-group form-group-default required">
+            <label>Full Name</label>
+            <div class="controls">
+              <input type="text" name="username" placeholder="Name" [(ngModel)]="request.username" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Email</label>
+            <div class="controls">
+              <input type="text" name="email" placeholder="Email" [(ngModel)]="request.email" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Contact Number</label>
+            <div class="controls">
+              <input type="text" name="mobile" placeholder="Mobile number" [(ngModel)]="request.phone" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Course</label>
+            <div class="controls">
+              <input type="password" class="form-control required" name="password" placeholder="Select course" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Choose Category</label>
+            <div class="controls">
+              <input type="password" class="form-control required" name="password" placeholder="I am a" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required typehead" id="sample-three">
+            <label>Message</label>
+            <textarea class="form-control" cols="12" rows="4" name="message" [(ngModel)]="request.message"></textarea>
+          </div>
+          <div class="form-group m-t-20 m-b-20 required">
+            <div class="checkbox check-success">
+              <input type="checkbox" value="1" id="checkbox1" name="agree" [(ngModel)]="request.agree">
+              <label for="checkbox1">I agree to be contacted over email and phone</label>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-cons btn-block btn-lg m-t-10" type="button" (click)="postRequestCallback()" >Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- corporate Modal Starts Here -->
+<div class="modal fade disable-scroll" id="corporate" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header clearfix text-left">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <i class="pg-close fs-14"></i>
+        </button>
+        <h5>Corporate
+          <span class="semi-bold">Training</span>
+        </h5>
+      </div>
+      <div class="modal-body">
+        <form id="form-register" class="p-t-15" action="#">
+          <div class="form-group form-group-default required">
+            <label>Full Name</label>
+            <div class="controls">
+              <input type="text" name="username" placeholder="Name" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Email</label>
+            <div class="controls">
+              <input type="text" name="email" placeholder="Email" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Contact Number</label>
+            <div class="controls">
+              <input type="text" name="mobile" placeholder="Mobile number" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Course</label>
+            <div class="controls">
+              <input type="password" class="form-control required" name="password" placeholder="Select course" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Country</label>
+            <div class="controls">
+              <input type="password" class="form-control required" name="password" placeholder="e.g India" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required typehead" id="sample-three">
+            <label>Message</label>
+            <textarea class="form-control" cols="12" rows="4"></textarea>
+            <input class="typeahead form-control sample-typehead" name="country" type="text" placeholder="your message" required>
+          </div>
+          <div class="form-group m-t-20 m-b-20 required">
+            <div class="checkbox check-success">
+              <input type="checkbox" value="1" id="checkbox1">
+              <label for="checkbox1">I agree to be contacted over email and phone</label>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-cons btn-block btn-lg m-t-10" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Subscription Modal Starts Here -->
+<div class="modal fade disable-scroll" id="subscribe" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header clearfix text-left">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <i class="pg-close fs-14"></i>
+        </button>
+        <h5>Newsletter
+          <span class="semi-bold">Subscription</span>
+        </h5>
+      </div>
+      <div class="modal-body">
+        <form id="form-register" class="p-t-15" action="#">
+          <div class="form-group form-group-default required">
+            <label>Full Name</label>
+            <div class="controls">
+              <input type="text" name="username" placeholder="Name" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group form-group-default required">
+            <label>Email</label>
+            <div class="controls">
+              <input type="text" name="email" placeholder="Email" class="form-control" required>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-cons btn-block btn-lg m-t-10" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call Us Numbers Modal Starts Here -->
+<div class="modal fade disable-scroll" id="callus" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header clearfix text-left">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <i class="pg-close fs-14"></i>
+        </button>
+        <h5 class="semi-bold">Call Us</h5>
+      </div>
+      <div class="modal-body text-center">
+        <h4 class="semi-bold">
+          <span class="flag-icon flag-icon-us m-r-5"></span>USA +1 1234567890</h4>
+        <h4 class="semi-bold">
+          <span class="flag-icon flag-icon-au m-r-5"></span>AUS +61 1234567890</h4>
+        <h4 class="semi-bold">
+          <span class="flag-icon flag-icon-in m-r-5"></span>IND +91 1234567890</h4>
+      </div>
+    </div>
+  </div>
+</div>

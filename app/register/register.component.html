@@ -1,0 +1,102 @@
+<div class="page-content-wrapper">
+    <div class="content">
+        <div class="container-fluid p-t-30">
+            <div class="row">
+                <div class="col-lg-5 mx-auto p-t-30">
+                    <div class="card card-transparent">
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card card-default">
+                                        <div class="card-block">
+                                            <div class="login-container bg-white">
+                                                <div class="">
+
+                                                    <h3 class="text-center p-t-35">Signup with Virtiledge</h3>
+
+                                                    <p class="text-center">
+                                                        Easily Sign in with</p>
+                                                    <div class="text-center">
+                                                        <button type="button" class="btn btn-default btn-facebook btn-sm">
+                                                            <i class="fa fa-facebook fa-fw"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-default btn-google-plus btn-sm">
+                                                            <i class="fa fa-google fa-fw"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-default btn-linkedin btn-sm">
+                                                            <i class="fa fa-linkedin fa-fw"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <p class="text-center p-t-15">
+                                                        Or using email
+                                                    </p>
+                                                    <form id="form-register" class="p-t-15" role="form" action="#">
+                                                        <div class="form-group">
+                                                            <div class="radio radio-success">
+                                                                <input type="radio" checked="checked" value="student" name="optionyes" id="yes" [(ngModel)]="user.type">
+                                                                <label for="yes">I'm a Student</label>
+                                                                <input type="radio" value="tutor" name="optionyes" id="no">
+                                                                <label for="no">I'm a Tutor</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-group-default required">
+                                                            <label>Full Name</label>
+                                                            <div class="controls">
+                                                                <input type="text" name="username" placeholder="Name" class="form-control" required [(ngModel)]="user.fullname">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group form-group-default required">
+                                                            <label>Email</label>
+                                                            <div class="controls">
+                                                                <input type="text" name="email" placeholder="Email" class="form-control" required [(ngModel)]="user.email" (keyup)="verifyEmail()">
+                                                            </div>
+                                                            <div *ngIf="this.verifyEmailStatus=='success'" class="validation_error">Email Already Exists.</div>
+                                                        </div>
+
+                                                        <div class="form-group form-group-default required">
+                                                            <label>Mobile Number</label>
+                                                            <div class="controls">
+                                                                <input type="text" name="mobile" placeholder="Email" class="form-control" required [(ngModel)]="user.phone"> 
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group form-group-default required">
+                                                            <label>Choose Password</label>
+                                                            <div class="controls">
+                                                                <input type="password" class="form-control required" name="password" placeholder="Credentials" required [(ngModel)]="user.password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group form-group-default required typehead" id="sample-three">
+                                                            <label>Country</label>
+                                                            <input class="typeahead form-control sample-typehead" name="country" type="text" placeholder="e.g India" required [(ngModel)]="user.country">
+                                                        </div>
+
+                                                        <button class="btn btn-primary btn-cons btn-block btn-lg m-t-10" type="submit" (click)="register(user)">Register</button>
+                                                        <div class="row p-t-20">
+                                                            <div class="col-md-12 no-padding sm-p-l-10 text-center">
+                                                                <div class="form-group">
+                                                                    <span class="small">Already have an account?</span>
+                                                                    <a routerLink="/login"
+                                                                        class="small"> Login!</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

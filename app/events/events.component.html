@@ -1,0 +1,188 @@
+<br>
+<br>
+
+<div class="page-content-wrapper">
+  <div class="content sm-gutter">
+    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+      <div class="inner">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Course Events</li>
+        </ol>
+      </div>
+    </div>
+    <div class="container-fluid p-l-5 p-r-5 p-t-0 p-b-25 sm-padding-10">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card card-transparent">
+            <div class="card-block">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                  <h2>{{eventDetails?.length}} Events found</h2>
+
+                  <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-12">
+
+                      <div class="card">
+                        <div class="card-block">
+                          <form>
+
+                            <select name="eventType">
+                              <option value="all">
+                                All Courses
+                              </option>
+                              <option value="classroom">
+                                Class Room
+                              </option>
+                              <option value="online">
+                                Online
+                              </option>
+                              <option value="self">
+                                Self Learning
+                              </option>
+                            </select>
+
+                            <select name="eventType">
+                              <option value="all">
+                                All Event Types
+                              </option>
+                              <option value="classroom">
+                                Class Room
+                              </option>
+                              <option value="online">
+                                Online
+                              </option>
+                              <option value="self">
+                                Self Learning
+                              </option>
+                            </select>
+
+                            <select name="eventLocation">
+                              <option value="all">
+                                All Locations
+                              </option>
+                              <option value="india">
+                                India
+                              </option>
+                              <option value="aususa">
+                                Australia
+                              </option>
+                              <option value="self">
+                                USA
+                              </option>
+                            </select>
+                            <button>Search Events</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                      <div class="table-responsive">
+                        <table class="table" id="tableWithSearch">
+                          <thead>
+                            <tr>
+                              <th>Course Category</th>
+                              <th>Course</th>
+                              <th>Course Type</th>
+                              <th>Workshop Date</th>
+                              <th>Price</th>
+                              <th>Register</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let event of eventDetails">
+                              <td class="v-align-middle ">
+                                <div class="row">
+                                  <div class="col-lg-12 text-center">
+                                    <img src="../assets/main/img/icons/virtiledge-icon-60x60-1.png" class="figure-img img-fluid align-middle text-center p-t-10"
+                                      alt="">
+                                    <b>{{event.cc_name}}</b>
+                                  </div>
+                                </div>
+                              </td>
+                              <td class="v-align-middle">
+                                <p>{{event.course_title}}</p>
+                              </td>
+                              <td class="v-align-middle">
+                                <p>
+                                  <i class="fa fa-book fa-fw m-r-5"></i>
+                                  {{event.event_type}}
+                                </p>
+                              </td>
+                              <td class="v-align-middle">
+                                <p style="color: green">
+                                  <i class="fa fa-map-marker fa-fw m-r-5"></i>
+                                  {{event.event_from_date}} - {{event.event_to_date}}</p>
+                              </td>
+                              <td class="v-align-middle">
+
+                                <p class="bold">{{event.event_price_type}} {{event.event_price}}</p>
+                              </td>
+                              <td class="v-align-middle">
+                                <a href="javascript:;" class="btn btn-primary btn-sm">Enroll Now</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-12 col-sm-12 col-12" *ngFor="let event of eventDetails">
+                        <div class="card card-default">
+                          <div class="card-block">
+                            <div class="row">
+                              <div class="col-lg-1 text-center">
+                                <img src="../assets/main/img/icons/virtiledge-icon-60x60-1.png" class="figure-img img-fluid align-middle text-center p-t-10"
+                                  alt="">
+                              </div>
+                              <div class="col-lg-9">
+                                <ul class="list-group custom-footer-list events-list">
+                                  <li>
+                                    <h5 class="semi-bold">{{event['course_title']}}</h5>
+                                  </li>
+                                  <li>
+                                    <i class="fa fa-map-marker fa-fw m-r-5"></i>Date:
+                                    <span class="sub-heading m-l-5">{{event['event_from_date']}} - {{event['event_from_date']}}</span>
+                                  </li>
+                                  <li>
+                                    <i class="fa fa-book fa-fw m-r-5"></i>Mode Of Learning:
+                                    <span class="sub-heading m-l-5">{{event['event_type']}}</span>
+                                  </li>
+                                  <li>
+                                    <i class="fa fa-book fa-fw m-r-5"></i>Course Type:
+                                    <span class="sub-heading m-l-5">Offline</span>
+                                  </li>
+                                </ul>
+
+                              </div>
+                              <div class="col-lg-2">
+                                <a href="javascript:;" class="btn btn-primary btn-lg btn-block m-t-30">Enroll Now
+                                  <i class="fa fa-angle-double-right m-l-5"></i>
+                                </a>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

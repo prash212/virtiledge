@@ -1,0 +1,68 @@
+/*Custom CSS*/
+
+/*Footer CSS starts here*/
+.footer {
+	/* left:0 !important; */
+	position:absolute;
+	background-color:#ffffff;
+	border-top: 1px solid rgba(0,0,0,.125);
+	margin: 20px 25px 0 25px;
+	padding:8px 20px;
+	bottom:0 !important;
+}
+.custom-footer-list li {
+    list-style-type: none;
+}
+
+ul.custom-footer-list>li {
+    /* font-size: 21px; */
+}
+
+.custom-footer-list>li {
+	padding-left: 3px;
+    line-height: 24px;
+}
+
+.custom-footer-list li a {
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    color: #646464;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.custom-footer-list h6{
+	font-weight:600;
+}
+
+/*Footer CSS ends here*/
+
+/* Custom font size starts here */
+
+.f-s-12 {
+	font-size:12px !important;
+}
+
+/* Custom font size ends here */
+
+/* Custom colors starts here */
+.color-facebook {
+	color:#4867AA;
+}
+
+.color-google-plus {
+	color:#D44330;
+}
+
+.color-twitter {
+	color:#1DA1F2;
+}
+
+.color-linkedin {
+	color:#007BB6;
+}
+/* Custom colors ends here */
+
+
