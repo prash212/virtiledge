@@ -1853,7 +1853,7 @@ body.menu-pin .overlay .overlay-brand {
 
 .page-container .page-content-wrapper .content {
     z-index: 10;
-    padding-top: 60px;
+    padding-top: 110px;
     padding-bottom: 69px;
     min-height: 100%;
     -webkit-transition: all 0.3s ease;
@@ -3096,7 +3096,7 @@ h1 {
 }
 
 h2 {
-    font-size: 31px;
+    font-size: 28px;
     line-height: 40px;
 }
 
@@ -3781,13 +3781,13 @@ hr.dotted {
 
 .windows body,
 .windows p {
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: normal;
 }
 
 .windows h3 {
     font-size: 29px;
-    line-height: 33px;
+    line-height: 45px;
 }
 
 .windows h4 {
@@ -14452,6 +14452,10 @@ body.overflow-hidden {
     padding-bottom: 50px!important;
 }
 
+.padding-40 {
+    padding: 40px!important;
+}
+
 .padding-50 {
     padding: 50px!important;
 }
@@ -14667,6 +14671,10 @@ body.overflow-hidden {
 .b-b {
     border-style: solid;
     border-width: 0;
+}
+
+.b-0 {
+    border-width: 0px;
 }
 
 .b-r {
@@ -15608,7 +15616,7 @@ body.overflow-hidden {
     body.box-layout .header>.container {
         background-color: #fff;
         border-bottom: 1px solid rgba(230, 230, 230, 0.7);
-        padding: 0 20px 0 0;
+        padding: 0 20px 0 20px;
         height: 100%;
     }
     body.box-layout .page-sidebar {
@@ -16562,6 +16570,9 @@ body.overflow-hidden {
     .error-container-innner {
         width: auto;
     }
+	.banner-section h1 {
+		font-size:14px;
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

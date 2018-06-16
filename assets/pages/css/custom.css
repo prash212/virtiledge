@@ -234,6 +234,60 @@ ul.custom-footer-list>li {
   border-top: 3px solid #8b53a2;
 }
 
+.custom-heading h2 {
+	color:#333333;
+	font-weight:500;
+	margin-bottom:20px;
+}
+
+.carousel-indicators .active {
+    background-color: #8b53a2;
+}
+
+.carousel-indicators li {
+    background-color: #E1BEE7;
+}
+
+.custom-heading h2:after {
+	content: '.';
+  display: block;
+  height: 1px;
+  width: 90px;
+  margin: 8px auto;
+  text-indent: -9999px;
+  border-top: 3px solid #8b53a2;
+}
+
+.events-list .sub-heading {
+	font-weight:500;
+}
+
+.events-list li{
+	margin-bottom: 5px;
+}
+
+.event-enroll, .event-icon {
+	margin: 60px 0;
+}
+
+.virtiledge-offers-section .section-offers{ 
+	border-right:1px solid rgba(234, 236, 238, 0.7);
+	border-bottom:0;
+}
+
+.virtiledge-offers-section td{ 
+	border-bottom:0 !important;
+}
+
+.owl-carousel .owl-item img {
+    width: auto !important;
+	display:inline-block !important;
+}
+.virtiledge-offers-section .card.card-default:hover {
+    border: 1px solid rgba(38,133,231,0.3);
+}
+
+
 /* Section css ends here*/
 
 /* Custom font size starts here */
@@ -512,12 +566,13 @@ ul.custom-course-menu-list>li {
 
 .header .header-md-height-main {
     height: 60px;
+	margin-bottom: 8px;
 }
 
 .custom-main-menu  li a {
 	font-size:15px;
 	color: #333333;
-	font-weight:500;
+	font-weight:400;
 }
 
 .popular-courses li a{
@@ -565,6 +620,13 @@ ul.custom-course-menu-list>li {
     border-color: #8955a4;
 }
 
+.select2-close-mask{
+    z-index: 2099;
+}
+.select2-dropdown{
+    z-index: 3051;
+}
+
 .btn-main.active,
 .btn-main:active,
 .btn-main.active:focus,
@@ -575,3 +637,5 @@ ul.custom-course-menu-list>li {
     border-color: #64038c;
     color: #fff;
 }
+
+/* Help Section Starts Here */

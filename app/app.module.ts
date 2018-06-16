@@ -22,6 +22,20 @@ import { SuccessComponent } from './success/success.component';
 import { EventsComponent } from './events/events.component';
 import { FaqService } from './services/faq.service';
 import { EventsService } from './services/events.service';
+import { RefundPolicyComponent } from './refund-policy/refund-policy.component';
+import { ReschedulePolicyComponent } from './reschedule-policy/reschedule-policy.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { BecomeTrainerComponent } from './become-trainer/become-trainer.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CorporateTrainingComponent } from './corporate-training/corporate-training.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ErrorComponent } from './error/error.component';
+import { VerifyComponent } from './verify/verify.component';
+import { EnrollComponent } from './enroll/enroll.component';
 
 
 @NgModule({
@@ -34,7 +48,21 @@ import { EventsService } from './services/events.service';
     RegisterComponent,
     LoginComponent,
     SuccessComponent,
-    EventsComponent
+    EventsComponent,
+    RefundPolicyComponent,
+    ReschedulePolicyComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent,
+    AboutUsComponent,
+    BecomeTrainerComponent,
+    ContactUsComponent,
+    CorporateTrainingComponent,
+    FaqsComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    ErrorComponent,
+    VerifyComponent,
+    EnrollComponent
   ],
   imports: [
     BrowserModule,
