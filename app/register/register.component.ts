@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
   }
 
   register(user) {

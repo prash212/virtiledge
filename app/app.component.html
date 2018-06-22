@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 
-<div class="modal fade fill-in custom-show" id="modalFillIn" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade fill-in custom-show" id="modalFillIn" tabindex="-1" role="dialog">
   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
     <i class="pg-close"></i>
   </button>
@@ -9,13 +9,15 @@
     <div class="modal-content modal-content-custom">
       <div class="modal-body">
           <div class="container">
-        <div class="row">
-          <div class="col-lg-12 m-t-40">
-            <ul class="nav nav-tabs nav-tabs-simple custom-nav-tabs" role="tablist" data-init-reponsive-tabs="dropdownfx">
+        <div class="">
+          <div class="col-lg-6 col-md-6 col-sm-12 m-t-40">
+              <div class="table-responsive b-0">
+                  <ul class="nav nav-tabs nav-tabs-simple" role="tablist" data-ng-init-reponsive-tabs="dropdownfx">
               <li class="nav-item" *ngFor="let course of courseCategory; let i = index">
                 <a href="javascript:;" class="{{i==0?'active':''}}" data-toggle="tab" role="tab" data-target="#course_menu_{{i}}" (click)="course_list(course.cc_id_pk);">{{course?.cc_name}}</a>
               </li>
             </ul>
+              </div>
             <div class="tab-content">
               <div class="tab-pane active" id="course_menu_1">
                 <div class="row column-seperation">

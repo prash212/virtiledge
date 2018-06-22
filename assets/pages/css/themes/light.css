@@ -307,7 +307,7 @@ body.menu-pin .overlay .overlay-brand {
     color: #7a8994;
 }
 
-.page-sidebar {
+.page-sidebar1 {
     width: 280px;
     background-color: #fff;
     z-index: 1000;
@@ -1530,9 +1530,9 @@ body.menu-pin .overlay .overlay-brand {
 
 .quickview-wrapper {
     position: fixed;
-    right: -285px;
+    left: -250px;
     top: 0;
-    width: 285px;
+    width: 250px;
     background: #fff;
     bottom: 0;
     z-index: 1000;
@@ -1546,14 +1546,14 @@ body.menu-pin .overlay .overlay-brand {
 }
 
 .quickview-wrapper.open {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate(-100%, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -ms-transform: translate(100%, 0);
 }
 
 .quickview-wrapper .quickview-toggle {
     position: absolute;
-    right: 12px;
+    left: 12px;
     top: 2px;
     color: #627182;
     padding: 6px;
@@ -1667,8 +1667,8 @@ body.menu-pin .overlay .overlay-brand {
     background: transparent;
     bottom: 8px;
     display: block;
-    left: 50%;
-    margin-left: -40%;
+    right: 50%;
+    margin-right: -40%;
     position: absolute;
     width: 83%;
     border: 1px solid #968974;
@@ -1687,7 +1687,7 @@ body.menu-pin .overlay .overlay-brand {
 }
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .list>ul li .left {
-    float: left;
+    float: right;
     width: 65%;
     height: 100%;
     padding-top: 9px;
@@ -1695,11 +1695,11 @@ body.menu-pin .overlay .overlay-brand {
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .list>ul li .left .checkbox {
     display: none;
-    float: left;
+    float: right;
 }
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .list>ul li .left .checkbox label {
-    margin-right: 0;
+    margin-left: 0;
     vertical-align: text-top;
 }
 
@@ -1717,13 +1717,13 @@ body.menu-pin .overlay .overlay-brand {
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .list>ul li .right {
     font-size: 10.5px;
-    text-align: right;
+    text-align: left;
     width: 35%;
     line-height: 41px;
 }
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .list>ul li .right .date {
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .list>ul li:hover {
@@ -1753,7 +1753,7 @@ body.menu-pin .overlay .overlay-brand {
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .note .toolbar>li {
     display: inline-block;
     border-right: 1px solid #EDECEC;
-    float: left;
+    float: right;
     line-height: 37px;
     padding: 0;
     text-align: center;
@@ -1791,7 +1791,7 @@ body.menu-pin .overlay .overlay-brand {
     display: table;
     height: 100%;
     width: 100%;
-    padding: 0 20px 0 45px;
+    padding: 0 45px 0 20px;
     white-space: normal;
 }
 
@@ -1804,9 +1804,9 @@ body.menu-pin .overlay .overlay-brand {
 }
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .note .body .top>a {
-    float: left;
+    float: right;
     color: #b0b0a8;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .note .body .top>span {
@@ -1839,6 +1839,7 @@ body.menu-pin .overlay .overlay-brand {
 .quickview-wrapper .nav-tabs~.tab-content .quickview-notes .note .body .content .quick-note-editor::selection {
     background: #fef8ae;
 }
+
 
 .page-container {
     width: 100%;
@@ -3176,7 +3177,7 @@ p {
     line-height: 22px;
     margin: 0px 0px 10px 0px;
     font-style: normal;
-    white-space: normal;
+    /* white-space: normal; */
 }
 
 small,
@@ -3376,7 +3377,7 @@ hr.dotted {
 }
 
 .bg-primary-light {
-    background-color: #3395ed;
+    background-color: #3395ed !important;
 }
 
 .bg-primary-lighter {
@@ -6200,12 +6201,11 @@ body>.pgn-wrapper {
     padding: 13px 20px;
     margin-right: 0;
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.06em;
     color: #333333;
     font-size: 10.5px;
     min-width: 70px;
-    text-transform: uppercase;
     border-color: transparent;
     position: relative;
     line-height: 1.7em;
@@ -6213,7 +6213,7 @@ body>.pgn-wrapper {
 
 .nav-tabs>li>a:hover,
 .nav-tabs>li>a:focus {
-    background: transparent;
+    background: #ffffff !important;
     border-color: transparent;
     color: #7a8994;
 }
@@ -6278,6 +6278,7 @@ body>.pgn-wrapper {
 .nav-tabs.nav-tabs-left>li,
 .nav-tabs.nav-tabs-right>li {
     float: none;
+	margin-bottom:6px;
 }
 
 .nav-tabs.nav-tabs-left {
@@ -6327,7 +6328,7 @@ body>.pgn-wrapper {
     -webkit-backface-visibility: hidden;
     width: 100%;
     display: block;
-    background-color: #ea2c54;
+    background-color: #8b53a2;
     height: 0px;
     content: '';
     left: 0;
@@ -14452,10 +14453,6 @@ body.overflow-hidden {
     padding-bottom: 50px!important;
 }
 
-.padding-40 {
-    padding: 40px!important;
-}
-
 .padding-50 {
     padding: 50px!important;
 }
@@ -15616,7 +15613,7 @@ body.overflow-hidden {
     body.box-layout .header>.container {
         background-color: #fff;
         border-bottom: 1px solid rgba(230, 230, 230, 0.7);
-        padding: 0 20px 0 20px;
+        padding: 0 20px 0 0;
         height: 100%;
     }
     body.box-layout .page-sidebar {

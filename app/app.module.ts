@@ -36,6 +36,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { ErrorComponent } from './error/error.component';
 import { VerifyComponent } from './verify/verify.component';
 import { EnrollComponent } from './enroll/enroll.component';
+import { CourseCategoryComponent } from './course-category/course-category.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { EnrollComponent } from './enroll/enroll.component';
     ResetPasswordComponent,
     ErrorComponent,
     VerifyComponent,
-    EnrollComponent
+    EnrollComponent,
+    CourseCategoryComponent
   ],
   imports: [
     BrowserModule,

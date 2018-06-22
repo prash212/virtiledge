@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CourseDetailsService } from '../services/course-details.service';
 import { FaqService } from '../services/faq.service';
 import { EventsService } from '../services/events.service';
+declare var $;
 
 @Component({
   selector: 'app-course-detail',
@@ -30,9 +31,18 @@ export class CourseDetailComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.getCourses(params['id']);
     });
+
+    $('a.js-scroll-trigger').on('click', function (e) {
+      var anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top - 130
+      }, 1000);
+      e.preventDefault();
+    });
   }
 
   getCourses(courseid) {
+    window.scroll(0, 0);
     this.courseDetailsService.getCoursDetails(courseid)
       .subscribe((response) => {
         this.courseDetails = response['courseDetails']['data']['0'];

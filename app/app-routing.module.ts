@@ -20,6 +20,7 @@ import { VerifyComponent } from './verify/verify.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ErrorComponent } from './error/error.component';
 import { EnrollComponent } from './enroll/enroll.component';
+import { CourseCategoryComponent } from './course-category/course-category.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'error', component: ErrorComponent },
   { path: 'enroll', component: EnrollComponent },
+  { path: 'course-category', component: CourseCategoryComponent },
   { path: "**", component:HomeComponent }
 ];
 

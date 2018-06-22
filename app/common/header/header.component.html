@@ -1,7 +1,7 @@
 <div class="header">
 
   <div class="container">
-      <div class="header-inner header-md-height">
+    <div class="header-inner header-md-height hidden-md-down">
           <div class="">
               <ul class="hidden-md-down hidden-xl-down notification-list no-margin hidden-sm-down b-grey b-l b-r no-style p-l-0 p-r-20">
                   <li class="p-r-10 inline">
@@ -21,42 +21,33 @@
               </ul>
           </div>
           <div class="d-flex align-items-center">
-              <ul class="hidden-md-down notification-list no-margin hidden-sm-down b-grey b-r no-style p-l-30 p-r-20">
-                <li class="p-r-10 inline">
-                    <div class="dropdown dropdown-default">
-                        <a href="javascript:;" class="btn btn-link" data-toggle="modal">
-                            <i class="fa fa-map-marker fa-fw"></i>
-                            India
-                        </a>
-                    </div>
+            <ul class="no-margin b-grey no-style p-l-30">
+                <li class="inline">
+                    <a href="javascript:;" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#region" class="btn btn-link">
+                        <i class="fa fa-map-marker fa-fw"></i>India</a>
                 </li>  
-                <li class="p-r-10 inline">
-                      <a href="javascript:;" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#callback" class="btn btn-default btn-sm">
-                          <i class="fa fa-phone fa-fw m-r-5"></i>Request Callback</a>
+                <li class="inline">
+                      <a href="javascript:;" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#callback" class="btn btn-link">
+                          <i class="fa fa-phone fa-fw"></i>Request Callback</a>
                   </li>
-                  <li class="p-r-10 inline">
-                      <a routerLink="login" class="btn btn-default btn-sm">
-                          <i class="fa fa-lock fa-fw m-r-5"></i>Login</a>
+                  <li class="inline">
+                      <a routerLink="login" class="btn btn-link text-primary">
+                          <i class="fa fa-lock fa-fw"></i>Login</a>
                   </li>
-                  <li class="p-r-10 inline">
-                      <a routerLink="register" class="btn btn-primary btn-sm color-white">
-                          <i class="fa fa-user fa-fw m-r-5"></i>Signup</a>
+                  <li class="inline">
+                      <a routerLink="register" class="btn btn-link text-primary">
+                          <i class="fa fa-user fa-fw"></i>Signup</a>
                   </li>
-                  <!--<li class="p-r-5 inline">
-          <a href="register.php" class=""><i class="fa fa-shopping-cart fa-fw"></i></a>
-        </li>-->
+                  <li class="inline">
+                      <a routerLink="enroll" class="">
+                          <i class="fa fa-shopping-cart fa-fw"></i><span class="badge badge-Warning">0</span></a>
+                  </li>
               </ul>
-              <div class="dropdown">
-                  <a routerLink="enroll" class="header-icon pg pg-shopping_cart btn-link m-l-10 sm-no-margin d-inline-block">
-                      <span class="badge badge-Warning">0</span>
-                  </a>
-              </div>
           </div>
       </div>
       <div class="header-inner header-md-height-main">
 
-          <a href="#" data-target="#modalFillIn" data-toggle="modal" class="btn-link toggle-sidebar hidden-lg-up pg pg-menu" data-toggle="sidebar">
-          </a>
+            <a href="#" class="header-icon pg pg-menu btn-link m-l-10 sm-no-margin d-inline-block d-lg-none" data-toggle="quickview" data-toggle-element="#quickview"></a>
 
           <div class="">
               <div class="brand inline">
@@ -69,7 +60,7 @@
           <div class="d-flex align-items-center">
               <ul class="hidden-md-down notification-list no-margin hidden-sm-down no-style p-l-30 p-r-0 custom-main-menu">
                   <li class="p-r-10 inline">
-                      <a href="javascript:;" data-target="#modalFillIn" data-toggle="modal" class="btn btn-default b-0">
+                      <a href="javascript:;" data-target="#modalFillIn" data-toggle="modal">
                           <i class="fa fa-bars fa-fw m-r-5"></i>Courses</a>
                   </li>
                   <li class="p-r-10 inline">
@@ -78,7 +69,7 @@
                   <li class="p-r-10 inline">
                       <a routerLink="corporate-training" class="">Coporate Solutions</a>
                   </li>
-                  <li class="p-r-10 inline">
+                  <li class="inline">
                       <a routerLink="become-trainer" class="">Become an Instructor</a>
                   </li>
               </ul>
@@ -86,3 +77,77 @@
       </div>
   </div>
 </div>
+
+<div id="quickview" class="quickview-wrapper" data-pages="quickview">
+        <ul class="nav nav-tabs">
+            <li class="active" data-target="#main-menu" data-toggle="tab">
+                <a href="#">Menu</a>
+            </li>
+			<li class="" data-target="#top-menu" data-toggle="tab">
+                <a href="#">Register/Login</a>
+            </li>
+        </ul>
+        <a class="btn-link quickview-toggle" data-toggle-element="#quickview" data-toggle="quickview"><i class="pg-close"></i></a>
+		<div class="tab-content">
+			<div class="tab-pane active no-padding" id="main-menu">
+					<nav class="page-sidebar visible" data-pages="sidebar">
+						<div class="sidebar-menu">
+							<ul class="menu-items">
+								<li class="m-t-10">
+									<a href="#" data-target="#modalFillIn" data-toggle="modal" class="detailed">
+										<i class="fa fa-angle-right fa-fw"></i>Courses
+									</a>
+								</li>
+								<li class="">
+									<a routerLink="about-us" class="detailed">
+										<i class="fa fa-angle-right fa-fw"></i>How Do We Work
+									</a>
+								</li>
+								<li class="">
+									<a routerLink="corporate-training">
+									<i class="fa fa-angle-right fa-fw"></i>Corporate Solutions
+									</a>
+								</li>
+								<li class="">
+									<a routerLink="become-trainer">
+									<i class="fa fa-angle-right fa-fw"></i>Become an Instructor
+									</a>
+								</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+				</nav>
+			</div>
+			<div class="tab-pane no-padding" id="top-menu">
+					<nav class="page-sidebar visible" data-pages="sidebar">
+						<div class="sidebar-menu">
+							<ul class="menu-items">
+								<li class="m-t-10">
+                                    <a href="javascript:;" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#region" class="detailed">
+                                        <i class="fa fa-map-marker fa-fw m-r-5"></i>India
+                                    </a>
+								</li>
+								<li class="">
+                                    <a href="javascript:;" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#callback" class="detailed">
+										<i class="fa fa-phone fa-fw m-r-5"></i>Request Callback
+									</a>
+								</li>
+								<li class="">
+                                    <a routerLink="login" class="">
+									<i class="fa fa-sign-in fa-fw m-r-5"></i>Login
+									</a>
+								</li>
+								<li class="">
+                                    <a routerLink="register" class="">
+									<i class="fa fa-user-plus fa-fw m-r-5"></i>Signup
+									</a>
+								</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+				</nav>
+			</div>
+		</div>
+
+        
+    </div>

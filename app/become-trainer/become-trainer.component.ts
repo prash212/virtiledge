@@ -10,6 +10,7 @@ export class BecomeTrainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.scroll(0, 0);
   }
 
 }
